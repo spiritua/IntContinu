@@ -1,0 +1,14 @@
+name: PHP Composer
+
+on: [push]
+jobs:
+  Explore-Github-Actions:
+  runs-on: windows-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: installer composer
+    - run: composer install
+    - name: installer phpunit
+    - run: composer require --dev phpunit/phpunit
+    - name: Test code
+    - run: composer exec phpunit/mathTest.php
