@@ -3,7 +3,7 @@ name: PHP Composer
 on: [push]
 jobs:
   Explore-Github-Actions:
-  runs-on: windows
+  runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v2
     - name: installer composer
